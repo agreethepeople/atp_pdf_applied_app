@@ -4,6 +4,9 @@ Platform::Application.configure do
   # Analytics
   GOOGLE_ANALYTICS_TRACKING_CODE = "UA-32192787-1"
 
+  # Default url rules for Devise
+  config.action_mailer.default_url_options = { :host => 'agreethepeople.heroku.com' }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
