@@ -1,0 +1,14 @@
+<title><%= "#{@issue.title} - Agree the People" %></title>
+
+<h1><%= @issue.title %></h1>
+<h2><%= @issue.statement %></h2>
+
+<table> 
+<% @arguments.each do |argument| %>
+  <tr>
+    <td><%= link_to argument.shorthand, argument %></td>
+    <td><%= argument.for_text %></td>
+    <td><%= argument.anti_text %></td>    
+  </tr>
+<% end %>
+</table>

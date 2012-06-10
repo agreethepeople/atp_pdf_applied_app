@@ -1,0 +1,10 @@
+<h1>Important Issues</h1>
+ 
+<table> 
+<% @issues.each do |issue| %>
+  <tr>
+    <td><%= link_to issue.title, issue %></td>
+    <td><%= issue.statement %></td>
+  </tr>
+<% end %>
+</table>

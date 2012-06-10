@@ -1,0 +1,2 @@
+class ArgumentsController < ApplicationController
+end
