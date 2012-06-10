@@ -4,5 +4,5 @@ class Issue < ActiveRecord::Base
 
   accepts_nested_attributes_for :arguments, :allow_destroy => true
   
-  attr_accessible :title, :statement, :slug
+  attr_accessible :title, :statement, :slug, :arguments_attributes
 end

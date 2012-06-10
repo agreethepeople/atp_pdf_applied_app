@@ -33,6 +33,8 @@ ActiveAdmin.register Issue do
         argument.input :shorthand 
         argument.input :for_text 
         argument.input :anti_text 
+      
+      argument.buttons
       end
     end
     
