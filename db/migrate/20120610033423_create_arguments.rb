@@ -1,7 +1,7 @@
 class CreateArguments < ActiveRecord::Migration
   def up
     create_table(:arguments) do |t|
-      t.text :for_text
+      t.text :for_text, :null => false
       t.text :anti_text
       t.text :shorthand
       t.text :source
