@@ -1,14 +1,21 @@
-<title><%= "#{@issue.title} - Agree the People" %></title>
+<!DOCTYPE html>
+<head>
+    <title><%= "#{@issue.title} - Agree the People" %></title>
+</head>
+<body>
+  <div id="mainContainer">
 
-<h1><%= @issue.title %></h1>
-<h2><%= @issue.statement %></h2>
+    <h1><%= @issue.title %></h1>
+    <h2><%= @issue.statement %></h2>
 
-<table> 
-<% @arguments.each do |argument| %>
-  <tr>
-    <td><%= link_to argument.shorthand, argument %></td>
-    <td><%= argument.for_text %></td>
-    <td><%= argument.anti_text %></td>    
-  </tr>
-<% end %>
-</table>
+    <div id="argumentList">
+        <% @arguments.each do |argument| %>
+        <div .class="argument">
+            <p><%= argument.for_text %></p>
+        </div>
+        <% end %>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -1,1 +1,27 @@
-<h1>Hey, Agree The People!</h1>
+<!DOCTYPE html>
+<head>
+    <title>Agree The People  - Home</title>
+</head>
+<body>
+  <div id="mainContainer">
+      <div id="header">
+          <h1><%= link_to "Agree the People", root_url %></h2>
+      </div>
+
+      <div id="instructions">
+          <h2>How To Use The Site</h2>
+          <p>Finding the hidden structure of complex issues using tweetable content.</p>
+          <div id="hideInstuct" class="button"></div>
+      </div>
+
+      <div id="subhead">
+          <h2>Important Issues</h2>
+          <ul id= "issueList">
+              <% @issues.each do |issue| %>
+                  <li class="issue"><%= link_to issue.title, issue %></li>
+              <% end %>    
+          </ul>
+      </div>
+  </div>
+</body>
+</html>
